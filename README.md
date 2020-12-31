@@ -22,8 +22,8 @@ a ferramenta possui as seguintes opções:
     smb = irá executar uma varredura completa identificando e enumerando vulnerabilidades no SMB                                    
     exit = fecha o programa
 
-Para instalar o NMAP: apt install nmap
-Para instalar o NMAP no Python: apt install python-nmap
-Para executar o programa: sudo python3 lazy_nmap_hunter.py
+* Para instalar o NMAP: apt install nmap
+* Para instalar o NMAP no Python: apt install python-nmap
+* Para executar o programa: sudo python3 lazy_nmap_hunter.py
 
     
