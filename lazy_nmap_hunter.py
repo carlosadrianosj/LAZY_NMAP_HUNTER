@@ -41,7 +41,7 @@ print('\033[35m'+'''
                                                                               ███    ███              
 
                        (programador: carlosadrianosj)
-             (Ferramenta criada para facilitar sccomando  com nmap)
+             (Ferramenta criada para facilitar comandos com nmap)
                          (Para Opções, digite help)
 \n\n\n\
 ''')
