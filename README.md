@@ -1,4 +1,4 @@
-# LAZY_NMAP_HUNTER
+# LAZY_NMAP_HUNTER EM MANUTENÇÂO
 Este projeto tem como intuito facilitar a utilização do NMAP com um sistema mais interativo para o usuário via terminal.
 
 O NMAP é uma ferramenta completa, com inúmeras funcionalidades, entretanto requer que o usuário tenha certa maestria com
