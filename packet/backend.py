@@ -1,6 +1,16 @@
 #!/usr/bin/python3
 
-import os, screen, time, lib_lazy_nmap, auto
+from packet.Class_auto import Auto
+from packet.Class_recon import Recon
+from packet.Class_scan import Scan
+from packet.Class_vuln import Vuln
+from packet.Class_screen import Screen
+auto = Auto()
+recon = Recon()
+scan = Scan()
+vuln = Vuln()
+screen = Screen()
+
 
 menuOld = []
 
@@ -49,71 +59,71 @@ def levelUm(command):
         screen.subMenuUm()
         escolha = str(input("\n\ndigite sua opção |ex: ack|: "))
         if escolha == "ack":
-            lib_lazy_nmap.scan_ack() 
+            scan.scan_ack()
 
         elif escolha == "syn":
-            lib_lazy_nmap.scan_syn()
+            scan.scan_syn()
 
         elif escolha == "udp":
-            lib_lazy_nmap.scan_udp()
+            scan.scan_udp()
 
         elif escolha == "arp":
-            lib_lazy_nmap.scan_arp()
+            scan.scan_arp()
 
         elif escolha == "icmp":
-            lib_lazy_nmap.scan_icmp()
+            scan.scan_icmp()
 
         elif escolha == "sctp":
-            lib_lazy_nmap.scan_sctp()
+            scan.scan_sctp()
             
         elif escolha == "ip":
-            lib_lazy_nmap.scan_ip()
+            scan.scan_ip()
 
         elif escolha == "broad":
-            lib_lazy_nmap.scan_broadcast_ping()
+            scan.scan_broadcast_ping()
 
         elif escolha == "sec":
-            lib_lazy_nmap.scan_waf_ips()
+            scan.scan_waf_ips()
                
     elif command == 2:
         setMenuOld(command)
         screen.subMenuDois()
         escolha = str(input("\n\ndigite sua opção |ex: serv|: "))
         if escolha == "serv":
-            lib_lazy_nmap.recon_serv()
+            recon.recon_serv()
 
         elif escolha == "op":
-            lib_lazy_nmap.recon_OP()
+            recon.recon_OP()
 
         elif escolha == "http":
-            lib_lazy_nmap.recon_http_methods()
+            recon.recon_http_methods()
 
         elif escolha == "smb":
-            lib_lazy_nmap.recon_smb()
+            recon.recon_smb()
 
         elif escolha == "proxy":
-            lib_lazy_nmap.recon_http_proxy()
+            recon.recon_http_proxy()
 
         elif escolha == "direct":
-            lib_lazy_nmap.recon_enum_files_directory()
+            recon.recon_enum_files_directory()
             
         elif escolha == "brute":
-            lib_lazy_nmap.recon_brute_force()
+            recon.recon_brute_force()
 
         elif escolha == "xss":
-            lib_lazy_nmap.recon_xss()
+            recon.recon_xss()
 
         elif escolha == "sqli":
-            lib_lazy_nmap.recon_SQLInjection()
+            recon.recon_SQLInjection()
 
         elif escolha == "git":
-            lib_lazy_nmap.recon_git_exposed()
+            recon.recon_git_exposed()
         
         elif escolha == "shellshock":
-            lib_lazy_nmap.recon_shellshock()
+            recon.recon_shellshock()
 
         elif escolha == "ssl":
-            lib_lazy_nmap.recon_SSL()
+            recon.recon_SSL()
 
 
     elif command == 3:
@@ -121,13 +131,13 @@ def levelUm(command):
         screen.subMenuTres()
         escolha = str(input("\n\ndigite sua opção |ex: all|: "))
         if escolha == "all":
-            lib_lazy_nmap.vuln_all()
+            vuln.vuln_all()
 
         elif escolha == "smb":
-            lib_lazy_nmap.vuln_smb()
+            vuln.vuln_smb()
 
         elif escolha == "default":
-            lib_lazy_nmap.vuln_default_accounts()
+            vuln.vuln_default_accounts()
 
         elif escolha == "shellshock":
-            lib_lazy_nmap.vuln_shellshock()
+            vuln.vuln_shellshock()
