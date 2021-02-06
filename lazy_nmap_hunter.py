@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 
-import backend
+from packet import backend
+
 backend.main()
